@@ -1,17 +1,14 @@
 # MULTIFUNCTION-ALARAM-CLOCK-WITH-ROOM-TEMPERATURE-DISPLAY
 ⏱️ Real-time clock with live date & weekday display.Continuously reads and displays the current time, date, and weekday on the LCD using an on-chip RTC for accurate timekeeping.
 🌡️ Room temperature monitoring using LM35.Measures room temperature in real-time using the LM35 sensor through the ADC module and updates the display instantly.
-🔔 Smart alarm with buzzer and auto/manual stop.Compares the current time with a user-configured alarm time and activates a buzzer when they match. The alarm can be stopped using a dedicated button or will automatically stop after one minute.
+🔔 Smart alarm with buzzer and auto/manual stop.Compares the current time with a user-configured alarm time and activates a buzzer when they match. The alarm can be stopped using a dedicated button or will automatically stop after one minute.The alarm functionality allows the system to alert the user at a predefined time using a buzzer. The alarm time is set through the keypad and stored for continuous comparison with the current RTC time. When both match, the buzzer is activated to notify the user. The alarm can be stopped manually through a dedicated button or will automatically turn off after a one-minute timeout, ensuring both convenience and safety. This feature enhances the system’s practicality as a reliable daily reminder.
 🚨 Interrupt-based menu for quick access.A dedicated switch triggers an external interrupt that pauses normal operation and provides the user with a configuration menu for easy system control.
-🔢 Keypad control for easy user input.
-
-✔️ Validated RTC & alarm settings for accuracy
-
+🔢 Keypad control for easy user input.This project uses a 4x4 matrix keypad as the primary input device for user interaction. It allows the user to navigate menu options, modify RTC settings, and set the alarm by entering numeric values directly. The microcontroller scans the keypad to detect key presses, and all inputs are validated to ensure correct time and date formats. This keypad interface makes the system easy to operate and eliminates the need for external programming tools during configuration.
+✔️ Validated RTC & alarm settings for accuracy: The RTC editing feature allows the user to update the current time and calendar information directly through the keypad whenever the displayed time is incorrect. The user can modify hours, minutes, seconds, day, date, month, and year through a structured LCD menu. Each value entered is validated against predefined limits such as 0–23 for hours, 0–59 for minutes and seconds, correct month ranges, and valid date ranges with leap year consideration. If any input exceeds the allowable range, an error message prompts the user to re-enter the correct value. Once all values are validated successfully, the updated information is written to the RTC registers, ensuring accurate real-time clock functionality.
 📟 LCD interface for clear and user-friendly updates.LCD menu provides three choices:
 1️⃣ Edit RTC Info
 2️⃣ Set Alarm
 3️⃣ Exit
 allowing smooth navigation and feature access.
+The project uses a character LCD as the primary display interface for showing real-time clock data, date, weekday, and room temperature. It also displays menu options, user prompts, and error messages during configuration and alarm settings. The LCD provides clear visual feedback to the user, ensuring easy interaction and monitoring of system status. By updating the display dynamically, it enhances usability and allows the system to operate as a standalone, user-friendly digital clock and environment monitoring device.
 
-RTC Editing with Validation:
-Users can modify hours, minutes, seconds, day, date, month, and year through the keypad. Each entry is validated for correct range considering leap years and month/day limits.
