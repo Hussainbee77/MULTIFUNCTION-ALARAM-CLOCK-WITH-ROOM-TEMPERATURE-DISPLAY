@@ -46,8 +46,8 @@ This project is fully modular, hardware-tested, and implemented using **Keil uVi
 - **LM35 Temperature Sensor**
 - **16x2 Character LCD (HD44780 compatible)**
 - **4x4 Matrix Keypad**
-- **Buzzer (Active/Passive)**
+- **Buzzer**
 - **Push Button (for EINT0 menu)**
-- **Push Button for Alarm Stop (P0.2)**
+- **Push Button for Alarm Stop (P0.22)**
 - **Connecting Wires / Breadboard**
 - **5V Power Supply**
